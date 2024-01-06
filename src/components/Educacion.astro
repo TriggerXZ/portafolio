@@ -1,0 +1,33 @@
+---
+import EducacionItem from "./EducacionItem.astro";
+const EDUCACION = [
+    {
+        date: "Enero 2022 - Diciembre 2023",
+        title: "Tecnico Profesional en Programacion Web",
+        description:
+            "",
+    },
+    {
+        date: "Septiembre 2023 - Octubre 2023",
+        title: "Diplomado en Modelo de Negocios, Innovación Y Emprendimiento",
+        description:
+            "",
+    },
+    {
+        date: "Enero 2021 - Diciembre 2021",
+        title: "Tecnico Laboral en Conocimientos Academicos en Ingles",
+        description:
+            "",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {
+        EDUCACION.map((educacion) => (
+            <li class="mb-10 ms-4">
+                <EducacionItem {...educacion} />
+            </li>
+        ))
+    }
+</ol>
