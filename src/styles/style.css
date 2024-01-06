@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest&display=swap');
+
+:root{
+    color-scheme: light dark;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #050505;
+    font-family: 'Onest';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@media (prefers-reduce-motion: reduce){
+    html {
+        scroll-behavior: auto;
+    }
+}

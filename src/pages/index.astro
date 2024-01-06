@@ -1,16 +1,67 @@
 ---
+import Layout from "../layouts/Layout.astro";
 
+//Components
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components//SectionContainer.astro";
+import Projects from "../components/Projects.astro";
+//Images
+import GitHub from "../../public/img/GitHub.astro";
+import Icons from "../components/SocialIcons.astro";
+import Facebook from "../../public/img/Facebook.astro";
+import Mail from "../../public/img/Mail.astro";
+import Case from "../../public/img/Briefcase.astro";
+import Code from "../../public/img/Code.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Porfolio de Airton - Desarrollador y Programador Web">
+	<main class="px-4">
+		<SectionContainer>
+			<img class="rounded-full w-32 h-32" src="/img/profile.png" alt="" />
+			<h1
+				class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-4"
+			>
+				Hey, Soy Airton <div class="flex justify-center items-center">
+				</div>
+			</h1>
+			<h2 class="text-xl opacity-80">
+				Soy un apasionado desarrollador web con habilidades
+				especializadas en HTML, CSS, JavaScript, PHP y SQL. Mi enfoque
+				innovador y entusiasta me distingue, y estoy ansioso por aportar
+				mis habilidades técnicas a proyectos web emocionantes.
+			</h2>
+			<nav class="flex gap-x-4 mt-4">
+				<Icons href="https://github.com/TriggerXZ">
+					<GitHub class="size-6" />GitHub
+				</Icons>
+				<Icons href="https://www.facebook.com/?_rdc=1&_rdr">
+					<Facebook class="size-6" />Facebook
+				</Icons>
+				<Icons href="mailto:dantelmaster2@gmail.com">
+					<Mail class="size-6" />dantelmaster2@gmail.com
+				</Icons>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer>
+			<h2
+				id="Experiencia"
+				class="text-2xl font-semibold pb-10 flex gap-x-2 items-center"
+			>
+				<Case class="size-6" />
+				Experiencia
+			</h2>
+			<Experience />
+		</SectionContainer>
+		<SectionContainer>
+			<h2
+				id="proyectos"
+				class="text-2xl font-semibold pb-10 flex gap-x-2 items-center"
+			>
+				<Code class="size-6" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>
